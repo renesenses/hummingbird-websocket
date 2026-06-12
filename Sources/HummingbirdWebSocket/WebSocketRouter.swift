@@ -74,6 +74,7 @@ public enum RouterShouldUpgrade: Sendable {
     case upgrade(HTTPFields = [:])
 }
 
+@available(macOS 14, iOS 17, tvOS 17, *)
 extension RouterMethods {
     /// Add path to router that support WebSocket upgrade
     /// - Parameters:
