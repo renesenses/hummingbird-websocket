@@ -82,6 +82,7 @@ extension RouterMethods {
     ///   - shouldUpgrade: Should request be upgraded
     ///   - handler: WebSocket channel handler function
     @preconcurrency
+    @available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
     @discardableResult public func ws(
         _ path: RouterPath = "",
         shouldUpgrade: @Sendable @escaping (Request, Context) async throws -> RouterShouldUpgrade = { _, _ in .upgrade([:]) },
