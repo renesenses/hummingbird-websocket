@@ -19,6 +19,7 @@ import NIOWebSocket
 @_spi(WSInternal) import WSCore
 
 /// Child channel supporting a web socket upgrade from HTTP1
+@available(macOS 14, iOS 17, tvOS 17, *)
 public struct HTTP1WebSocketUpgradeChannel: ServerChildChannel, HTTPChannelHandler {
     public typealias WebSocketChannelHandler = @Sendable (NIOAsyncChannel<WebSocketFrame, WebSocketFrame>, Logger) async -> Void
     /// Upgrade result (either a websocket AsyncChannel, or an HTTP1 AsyncChannel)

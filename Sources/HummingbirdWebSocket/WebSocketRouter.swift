@@ -132,6 +132,7 @@ public struct WebSocketUpgradeMiddleware<Context: WebSocketRequestContext>: Rout
     }
 }
 
+@available(macOS 14, iOS 17, tvOS 17, *)
 extension HTTP1WebSocketUpgradeChannel {
     ///  Initialize HTTP1WebSocketUpgradeChannel with async `shouldUpgrade` function
     /// - Parameters:
@@ -213,6 +214,7 @@ extension HTTP1WebSocketUpgradeChannel {
     }
 }
 
+@available(macOS 14, iOS 17, tvOS 17, *)
 extension HTTPServerBuilder {
     /// HTTP1 channel builder supporting a websocket upgrade
     ///

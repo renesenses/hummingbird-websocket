@@ -13,6 +13,7 @@ import Logging
 import NIOCore
 import WSCore
 
+@available(macOS 14, iOS 17, tvOS 17, *)
 extension HTTPServerBuilder {
     /// HTTP1 channel builder supporting a websocket upgrade
     /// - Parameters:
